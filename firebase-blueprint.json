@@ -1,0 +1,43 @@
+{
+  "entities": {
+    "Task": {
+      "title": "Task",
+      "description": "A task item in the CRUD application",
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "The unique identifier for the task"
+        },
+        "title": {
+          "type": "string",
+          "description": "The title of the task"
+        },
+        "description": {
+          "type": "string",
+          "description": "The detailed description of the task"
+        },
+        "completed": {
+          "type": "boolean",
+          "description": "Whether the task is completed"
+        },
+        "userId": {
+          "type": "string",
+          "description": "The ID of the user who owns the task"
+        },
+        "createdAt": {
+          "type": "string",
+          "format": "date-time",
+          "description": "The time the task was created"
+        }
+      },
+      "required": ["title", "userId", "createdAt"]
+    }
+  },
+  "firestore": {
+    "/tasks/{taskId}": {
+      "schema": "Task",
+      "description": "Collection of tasks"
+    }
+  }
+}

@@ -1,0 +1,5 @@
+{
+  "name": "TaskFlow CRUD",
+  "description": "A modern task management application with real-time updates using Angular and Firebase.",
+  "requestFramePermissions": []
+}
